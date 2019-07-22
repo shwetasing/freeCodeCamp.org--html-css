@@ -1,0 +1,81 @@
+<style>
+
+#description{
+	padding: 10px 10px 10px 10px;
+	background-color: yellow;
+	font-size: 30px;
+	text-align: center;
+}
+#about{
+	padding: 10px 10px 10px 10px;
+	background-color: magenta;
+	font-size: 20px;
+	text-align: center;
+}
+form{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 550px;
+}
+.Gosubmit{
+	position: relative;
+	bottom: 10px;
+}
+
+</style>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<h1 id = "title" style="text-align: center">Survey Form</h1>
+</head>
+
+<body>
+	<div>
+		<p id = "description">We need your feedback!</p>
+		<p id = "about">Please help us improve our services by taking this small customer satisfaction survey.</p>
+		<form id = "survey-form">
+			<label id = "name-label"><b>Name:</b> 
+			<input id = "name" type = "text" placeholder = "Enter Your Name" required></label>
+		</form>
+		<form>
+			<label id = "email-label"><b>Email ID:</b> 
+			<input id = "email" type = "email" placeholder = "Enter Your Email" required></label>
+		</form>
+		<form>
+			<label id = "number-label"><b>Mobile No.:</b>
+			<input id = "number" type = "number" placeholder = "Enter Your Mobile No." min = "0" max = "9" required></label>
+		</form>
+		<form>
+			<p><strong>Please select which state you belong to?</strong></p>
+			<select id = "dropdown"> 
+				<option value = "UP">UP</option>
+				<option value = "MP">MP</option>
+			</select>
+		</form>
+		<form>
+			<p><strong>How likely would you recommend about this to someone else?</strong></p>
+			<label for = "1"><input id = "1" type = "radio" name = "list" value = "1">Extremely likely</label>
+			<label for = "2"><input id = "2" type = "radio" name = "list" value = "2">Somewhat likely</label>
+			<label for = "2"><input id = "2" type = "radio" name = "list" value = "2">Least likely</label>
+		</form>
+		<form>
+			<p><strong>What did you like about this?</strong></p>
+			<label for = "10"><input id = "10" type = "checkbox" name = "choose" value = "3">Easy Access</label>
+			<label for = "20"><input id = "20" type = "checkbox" name = "choose" value = "4">Readable</label>
+			<label for = "30"><input id = "30" type = "checkbox" name = "choose" value = "5">Low Price</label>
+		</form>
+		<form>
+			<textarea>Additional Comments</textarea>
+			<input type = "submit" name = "submit" value = "Go!" class = "Gosubmit">
+		</form>
+		<form>
+			<button type = "submit" name = "submit">Submit</button>
+
+		</form>
+	</div>
+
+
+</body>
+</html>

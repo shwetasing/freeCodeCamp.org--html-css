@@ -1,0 +1,88 @@
+<style>
+	h1{
+	  text-align: center;
+	  padding: 20px 20px 20px 20px;
+	  background-color: white;
+	  font-style: italic;
+	  font-family: lucida sans;
+	  border-radius: 50%;
+	}
+
+
+
+	#quote-box{
+	  text-align: center;
+	  padding: 30px 30px 30px 30px;
+	}
+
+	#tweet-quote{
+	  background-color: yellow;
+	  padding: 10px 10px 10px 10px;
+	  border: solid;
+	  border-color: black;
+	}
+	#new-quote{
+	  background-color: blue;
+	  padding: 10px 10px 10px 10px;
+	  font-size: 19px;
+	  margin: 10px 10px 10px 10px;
+	}
+</style>
+
+<html>
+  <head>
+    <title>A Quote Machine</title>
+  </head>
+  <body style="background-color: magenta">
+    <h1>Random Quote Machine</h1>
+    
+    <div id="root"></div>
+    
+  </body>
+</html>
+
+<script>
+	class App extends React.Component{
+	constructor(props){
+		super(props);
+		this.state = {
+      text: '',
+			num: ''
+		};
+    this.ask = this.ask.bind(this);
+		this.handleText = this.handleText.bind(this);
+  	}
+	ask(){
+    if(this.state.text){
+      this.setState({
+			  num: Math.floor(Math.random() * 5),
+        text: this.state.text
+		  })
+    	}	
+	}
+  	handleText(event) {
+	    this.setState({
+	      text: event.target.value
+	    });
+	}
+
+	render(){
+    const quote = ["People lie, actions don't.", "Hurt me with the truth but don't comfort me with a lie.", 'A friend in need is a friend indeed.', 'The best apology is changed behaviour.', 'Nothing is impossible.'];
+    const author = ['Abacus', 'Bob', 'Charlie', 'Drake', 'Ellen'];
+    const ans = this.state.num;
+    
+		return(
+			<div id="quote-box" class="text-center">
+        <input type="text" onChange={this.handleText}/><br />
+        <button id="new-quote" onClick={this.ask}>New Quote!</button>
+        <p id="text"><strong>{quote[ans]}</strong></p>
+        <p id="author"><em>{author[ans]}</em></p>
+					
+				<a href={"twitter.com/intent/tweet?text="+quote[this.state.num]+" "+author[this.state.num]} id="tweet-quote">Tweet Quote!</a>
+			</div>
+		);
+	}
+};
+
+ReactDOM.render(<App/>,document.getElementById('root'))
+  </script>

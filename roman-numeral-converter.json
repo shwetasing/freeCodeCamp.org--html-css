@@ -1,0 +1,99 @@
+
+		   
+function convertToRoman(num) {
+    let arr = []
+    while(num){
+        if(num >= 1000){
+            for(let i = 1; i <= num/1000; i++){
+                arr.push('M');
+            }
+        num = num%1000;
+        }
+        else if(num >= 500){
+            if(num < 900){
+                for(let i = 1; i <= num/500; i++){
+                    arr.push('D');
+                }
+                num = num%500;
+            }
+            else{
+                arr.push('CM')
+                num = num%900;
+            }
+        
+        }
+        else if(num >= 100){
+            if(num < 400){
+                for(let i = 1; i <= num/100; i++){
+                    arr.push('C');
+                }
+                num = num%100;
+            }
+            else{
+                arr.push('CD')
+                num = num%400;
+            }
+        
+        }
+        else if(num >= 50){
+            if(num < 90){
+                for(let i = 1; i <= num/50; i++){
+                arr.push('L');
+                }
+                num = num%50;
+            }
+            else{
+                arr.push('XC')
+                num = num%90;
+            }
+        
+        }
+        else if(num >= 10){
+            if(num < 40){
+                for(let i = 1; i <= num/10; i++){
+                    arr.push('X');
+                }
+                num = num%10;
+            }
+            else{
+                arr.push('XL')
+                num = num%40;
+            }
+        
+        }
+        else if(num >= 5){
+            if(num < 9){
+                for(let i = 1; i <= num/5; i++){
+                    arr.push('V');
+                }
+                num = num%5;
+            }
+            else{
+                arr.push('IX')
+                num = num%9;
+            }
+        
+        }
+        else{
+            if(num === 4){
+                arr.push('IV')
+                num = num%4;
+            }
+            else{
+                for(let i = 0; i < num/1; i++){
+                    arr.push('I')
+                }
+                 num = num % 1;
+            }
+           
+        }
+    }
+    
+    num = ""
+    for(let j = 0; j < arr.length; j++){
+        num = num + arr[j]
+    }
+ return num;
+}
+
+convertToRoman(7);

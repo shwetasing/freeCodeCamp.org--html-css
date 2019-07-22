@@ -1,0 +1,27 @@
+
+
+function rot13(str) { // LBH QVQ VG!
+let n;
+let s = ''
+
+    for(let i = 0; i < str.length; i++){
+      if(str.charCodeAt(i) > 64 && str.charCodeAt(i) < 91){
+        n = str.charCodeAt(i);
+        if((n + 13) < 91){
+          n = n + 13;
+            s = s + String.fromCharCode(n);
+        }
+        else{
+            n = n + 13 - 91 + 65;
+            s = s + String.fromCharCode(n);
+        }
+      }
+       else{
+         s = s + str[i];
+       } 
+    }
+  
+  return s;
+}
+
+rot13("SERR PBQR PNZC");

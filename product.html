@@ -1,0 +1,72 @@
+<style>
+
+img{
+	width: 100px;
+	height: 100px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+@media (min-width: 300px){
+	p{
+		color: red;
+		font-style: italic;
+		display: flex;
+		flex-direction: column;
+	}
+	#nav-bar{
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+	.nav-link{
+		float: left;
+		text-align: center;
+		padding: 8px 16px;
+		text-decoration: none;
+	}
+	.nav-link:hover{
+		background: #ddd;
+		color: magenta;
+	}
+	video{
+		width: 500px;
+		height: 500px;
+		margin-left: 400px;
+		margin-top: 10px;
+	}
+}
+
+</style>
+
+<!DOCTYPE html>
+<html>
+	
+	<header id = "header">
+		<nav id = "nav-bar">
+			<a href = "#Product1" class = "nav-link">Go to Product1</a>
+			<a href = "#Product2" class = "nav-link">Go to Product2</a>
+			<a href = "#Product3" class = "nav-link">Go to Product3</a>
+		</nav>
+
+		<img id = "header-img" src = "C:\Users\Neha\Desktop\startbootstrap-agency-gh-pages\img\logos\7.png">
+	</header>
+		<form id = "form" action = "https://www.freecodecamp.com/email-submit">
+			<label >Email ID: 
+			<input type = "email" placeholder = "Enter your Email" id = "email" name = "email" required></label>
+			<input type = "submit" id = "submit">
+		</form>
+
+		<div>
+			<h2 id = "Product1">Product1: </h2>
+			<p>Olay uses many different ingredients in the production of their skin care line. The main ingredients used include retinyl propionate (vitamin A derivative), glycerin, niacinamide (vitamin B3), broad spectrum sunscreen, and amino peptides. Some of the products also include more hazardous ingredients, such as triethanolamine, propylparaben, benzyl salicylate, butylphenyl methylpropional (also called Lilial), hydroxyisohexyl 3-cyclohexene carboxaldehyde, and polyethylene glycol-4 dilaurate.
+				<video id = "video" controls><source src="C:\Users\Neha\Pictures\Bangalore\1.mp4" type="video/mp4"></video>
+			</p>
+			<h2 id = "Product2">Product2: </h2>
+			<p>Lakmé is an Indian cosmetics brand which is owned by Hindustan Unilever. Having Kareena Kapoor and Ananya Pandey as the ambassador, it ranked at number 1 among the cosmetics brands in India. Lakme started as a 100% subsidiary of Tata Oil Mills (Tomco). It was named after the French opera Lakmé, which itself is the French form of Lakshmi (the goddess of wealth) who is renowned for her beauty.</p>
+			<h2 id = "Product3">Product3: </h2>
+			<p>The Maybelline Company was created by a 19-year-old entrepreneur named Thomas Lyle Williams in 1915. Williams noticed his older sister Mabel applying a mixture of Vaseline and coal dust to her eyelashes to give them a darker, fuller look. He adapted it with a chemistry set and produced a product sold locally called Lash-Brow-Ine. Williams renamed his eye beautifier Maybelline in her honor. In 1917, the company produced Maybelline Cake Mascara, "the first modern eye cosmetic for everyday use," and Ultra Lash, the first mass-market automatic, in the 1960’s.</p>
+		</div>
+
+</html>
